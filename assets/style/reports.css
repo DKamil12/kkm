@@ -1,0 +1,154 @@
+@import url(./style.css);
+@import url(./form_style.css);
+
+/* VISIBLE WINDOW */
+.doc-list-container {
+    margin-left: 100px;
+    width: calc(100vw - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.doc-list__content {
+    width: 100%;
+    margin-top: 75px; 
+    padding: 15px 30px;
+    background-color: #f5f8fb;
+}
+/* VISIBLE WINDOW */
+
+/* HEAD PANEL */
+.doc-list__head-panel {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: bold;
+    color: #413e3e;
+}
+
+.doc-list__search-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-popup {
+    visibility: hidden;
+    position: absolute;
+    width: 450px;
+    height: fit-content;
+    top: 189px;
+    background: #F5F5F5;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+    padding: 17px 22px;
+
+}
+
+.show {
+    visibility: visible;
+}
+
+.filter-title {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    color: #3273AE;
+    margin-bottom: 15px;
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter-button {
+    width: 75px;
+    height: 25px;
+    background-color: #413e3e;
+    color: white;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    align-self: flex-end;
+}
+/* HEAD PANEL */
+
+
+/* DOCUMENTS TABLE */
+.doc-table {
+    font-size: 12px;
+    line-height: 14px;
+    min-width: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1388px) {
+    .filter-popup {
+        left: 62.5%;
+    }
+}
+
+@media screen and (min-width: 1388px) and (max-width: 1920px) {
+    .doc-table__row td {
+        max-width: 200px;
+    }
+
+    .filter-popup {
+        left: 70%;
+    }
+}
+
+.doc-table  th, td {
+    padding: 10px;
+}
+
+.doc-table th, td:first-child {
+    padding-left: 30px;
+}
+
+.doc-table__row_titles {
+    color: #3273AE;
+    font-weight: 600;
+    background-color: #f5f8fb;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.doc-table__row {
+    border-bottom: 1px solid rgba(125, 125, 125, 0.3); 
+}
+
+.doc-table__row:hover {
+    color: #3273AE;
+}
+/* DOCUMENTS TABLE */
+
+.form__field {
+    display: flex;
+}
+
+.form__field-title {
+    width: 185px;
+    height: fit-content, inherit;
+    padding: 11px;
+    background: #F1F1F1;
+    border: 1px solid #C8C8C8;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.form__field-content {
+    width: 340px;
+    height: inherit;
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-color: #C8C8C8;
+    padding: 0 15px;
+}
+
+

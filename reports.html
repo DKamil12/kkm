@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/reports.css">
+    <title>Отчеты</title>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <header class="header">
+        <a href="/main.html">
+            <img
+              src="../assets/images/kkm-icon.svg"
+              alt="kkm_logo"
+              class="header__logo"
+            />
+        </a>
+        <div class="header__search-and-logout">
+          <a href="/user-page.html"
+            ><img src="assets/images/user.svg" alt="user-page"
+          /></a>
+          <a href="/index.html"
+            ><img
+              src="./assets/images/logout.svg"
+              alt="header-logout-icon"
+              class="header__logout-icon"
+          /></a>
+        </div>
+      </header>
+      <aside class="sidebar">
+        <a href="/reports.html"
+          ><img src="../assets/images/reports.svg" alt="reports"
+        /></a>
+        <p class="sidebar__module-title">Отчеты</p>
+        <a href="/settings.html"><img src="../assets/images/settings.svg" alt="settings" /></a>
+        <p class="sidebar__module-title">Настройки</p>
+        <a href="/user-page.html"><img src="../assets/images/account.svg" alt="account"/></a>
+        <p class="sidebar__module-title">Личный кабинет</p>
+      </aside>
+      <!-- NAVIGATION -->
+    <div>.</div>    
+    <div class="doc-list-container">
+        <div class="doc-list__content">
+            <!-- HEAD PANEL -->
+            <div class="doc-list__head-panel">
+                <!-- SEARCH AND FILTER -->
+                <div class="doc-list__search-row">
+                    <img src="./assets/images/filter.svg" alt="filter" class="doc-list__filter" onclick="openFilter()">
+                    <img src="./assets/images/download.svg" alt="download" class="doc-list__filter">
+                    <span>Скачать</span>
+                    <!-- FILTER POPUP -->
+                    <div class="filter-popup" id="filter">
+                        <p class="filter-title">Фильтр</p>
+                        <form action="" class="filter-form">
+                            <div class="form__field">
+                                <label for="filterDate" class="form__field-title">Дата</label>
+                                <input type="date" name="filterDate" id="filterDate" class="form__field-content">
+                            </div class="form__field">
+                            <div class="form__field">
+                                <label for="revisionTime" class="form__field-title">Статус</label>
+                                <select name="status" id="status" class="form__field-content">
+                                    <option value="success">Успешно отправлен</option>
+                                    <option value="inWork">В процессе</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="filter-button">Применить</button>
+                        </form>    
+                    </div>    
+                    </div>
+                </div>
+                <!-- POPUP SCRIPT -->
+                <script>
+                    function openFilter() {
+                        var popup = document.getElementById("filter");
+                        popup.classList.toggle("show");
+                    }
+                </script>
+            </div>
+            <!-- DOCUMENTS TABLE -->
+            <table class="doc-table">
+                <tr class="doc-table__row doc-table__row_titles">
+                    <td></td>
+                    <td>Номер</td>
+                    <td>Название документа</td>
+                    <td>Дата</td>
+                    <td>Время</td>
+                    <td>Статус</td>
+                </tr>
+                <tr class="doc-table__row">
+                    <td><input type="checkbox"></td>
+                    <td>D0001</td>
+                    <td>Отчет-14.01.2023-14:45</td>
+                    <td>14.01.2023</td>
+                    <td>14:45</td>
+                    <td>Успешно отправлен</td>
+                </tr>
+            </table>
+        </div>    
+    </div>
+</body>
+</html>
